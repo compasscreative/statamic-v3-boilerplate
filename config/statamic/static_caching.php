@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'strategy' => null,
+    'strategy' => env('STATIC_CACHING_STRATEGY', null),
 
     /*
     |--------------------------------------------------------------------------
