@@ -1,0 +1,17 @@
+title: 'Partial: Show in Nav'
+taxonomies: false
+fields:
+  -
+    handle: show_in_main_nav
+    field:
+      type: toggle
+      instructions: 'If set, this page will appear in main navigation bar.'
+      display: 'Show in Main Nav'
+      width: 50
+  -
+    handle: show_in_footer_nav
+    field:
+      type: toggle
+      instructions: 'If set, this page will appear in footer navigation bar.'
+      display: 'Show in Footer Nav'
+      width: 50

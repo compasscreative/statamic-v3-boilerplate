@@ -1,0 +1,25 @@
+title: 'Partial: Gallery'
+taxonomies: false
+fields:
+  -
+    handle: section_gallery
+    field:
+      type: section
+      display: Gallery
+  -
+    handle: gallery_heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: gallery_subheading
+    field:
+      type: text
+      display: 'Sub Heading'
+  -
+    handle: gallery_images
+    field:
+      type: assets
+      display: Images
+      container: images
+      folder: gallery

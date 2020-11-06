@@ -1,0 +1,128 @@
+title: 'Page: About'
+taxonomies: false
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        import: hero
+      -
+        import: content_bard
+      -
+        handle: team_heading
+        field:
+          type: text
+          display: 'Team Heading'
+          instructions: 'Edit team members in the [employee collection](/cp/collections/entries/employee).'
+      -
+        handle: associations
+        field:
+          type: grid
+          display: Associations
+          fields:
+            -
+              handle: logo
+              field:
+                type: assets
+                display: Logo
+                container: images
+                folder: /associations
+                max_files: 1
+            -
+              handle: name
+              field:
+                type: text
+                display: Name
+      -
+        handle: mission_section
+        field:
+          type: section
+          display: Mission
+      -
+        handle: mission_heading
+        field:
+          type: text
+          display: Heading
+      -
+        handle: mission_body
+        field:
+          type: bard
+          display: Body
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+      -
+        handle: vision_section
+        field:
+          type: section
+          display: Vision
+      -
+        handle: vision_heading
+        field:
+          type: text
+          display: Heading
+      -
+        handle: vision_body
+        field:
+          type: bard
+          display: Body
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+      -
+        handle: history_section
+        field:
+          type: section
+          display: History
+      -
+        handle: history_heading
+        field:
+          type: text
+          display: Heading
+      -
+        handle: history_body
+        field:
+          type: bard
+          display: Body
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+
+
+

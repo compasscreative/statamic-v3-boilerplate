@@ -1,0 +1,38 @@
+title: Contact
+fields:
+  -
+    handle: name
+    field:
+      type: text
+      display: Name
+      validate: 'required|min:2'
+      required: true
+      placeholder: 'Your name'
+  -
+    handle: email
+    field:
+      type: text
+      display: Email
+      validate: required|email
+      required: true
+      placeholder: you@email.com
+  -
+    handle: phone
+    field:
+      type: text
+      display: Phone
+      placeholder: '(555) 555-5555'
+      listable: false
+  -
+    handle: location
+    field:
+      type: text
+      display: Location
+      placeholder: 'City, State / Prov'
+      listable: false
+  -
+    handle: message
+    field:
+      type: textarea
+      display: Message
+      listable: false

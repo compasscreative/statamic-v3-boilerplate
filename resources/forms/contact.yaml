@@ -1,0 +1,17 @@
+title: Contact
+honeypot: comment
+metrics:
+  -
+    type: total
+    label: 'Total Submissions'
+email:
+  -
+    to: '{{ env:NOTIFY_EMAIL default="hosting@compasscreative.ca" }}'
+    reply_to: '{{ email }}'
+    subject: 'New form submission from {{ name }}'
+    template: notify-admin
+  -
+    reply_to: '{{ env:NOTIFY_EMAIL default="hosting@compasscreative.ca" }}'
+    to: '{{ email }}'
+    subject: 'Your message to {{ site_name }}'
+    template: notify-customer

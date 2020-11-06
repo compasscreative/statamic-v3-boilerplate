@@ -1,0 +1,3 @@
+title: Employees
+template: employee
+route: '/team/{slug}'

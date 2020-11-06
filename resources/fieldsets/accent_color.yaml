@@ -1,0 +1,15 @@
+taxonomies: false
+title: 'Partial: Accent Color'
+fields:
+  -
+    handle: accent_color
+    field:
+      type: select
+      width: 50
+      display: 'Accent Colour'
+      options:
+        - blue-light
+        - green
+        - gold
+        - gray
+        - gray-200

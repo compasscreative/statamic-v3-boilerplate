@@ -1,0 +1,48 @@
+title: 'Application Form'
+fields:
+  -
+    handle: name
+    field:
+      type: text
+      display: Name
+      validate: 'required|min:2'
+      required: required
+      placeholder: 'Your name'
+  -
+    handle: email
+    field:
+      type: text
+      display: Email
+      validate: required|email
+      format: email
+      required: required
+      placeholder: you@email.com
+  -
+    handle: phone
+    field:
+      type: text
+      display: Phone
+      format: tel
+      placeholder: '(555) 555-5555'
+      listable: false
+  -
+    handle: job
+    field:
+      type: hidden
+      display: Job
+      source: '{{ title }}'
+  -
+    handle: resume
+    field:
+      type: asset
+      display: Resumé
+      container: images
+      folder: form-submissions
+      listable: false
+  -
+    handle: message
+    field:
+      type: textarea
+      display: Message
+      align: right
+      listable: false

@@ -1,4 +1,65 @@
-# admin:
-#   title: Administrator
-#   permissions:
-#     - super
+admin:
+  title: Admin
+  slug: admin
+  permissions:
+    - super
+editor:
+  title: Editor
+  slug: editor
+  permissions:
+    - 'access cp'
+    - 'content:view_drafts_on_frontend'
+    - resolve_duplicates
+    - 'view pages entries'
+    - 'edit pages entries'
+    - 'create pages entries'
+    - 'publish pages entries'
+    - 'delete pages entries'
+    - 'reorder pages entries'
+    - 'view blog entries'
+    - 'edit blog entries'
+    - 'reorder blog entries'
+    - 'create blog entries'
+    - 'publish blog entries'
+    - 'delete blog entries'
+    - 'view careers entries'
+    - 'edit careers entries'
+    - 'reorder careers entries'
+    - 'create careers entries'
+    - 'publish careers entries'
+    - 'delete careers entries'
+    - 'view employee entries'
+    - 'edit employee entries'
+    - 'reorder employee entries'
+    - 'create employee entries'
+    - 'publish employee entries'
+    - 'delete employee entries'
+    - 'view products entries'
+    - 'edit products entries'
+    - 'reorder products entries'
+    - 'create products entries'
+    - 'publish products entries'
+    - 'delete products entries'
+    - 'view projects entries'
+    - 'edit projects entries'
+    - 'reorder projects entries'
+    - 'create projects entries'
+    - 'publish projects entries'
+    - 'delete projects entries'
+    - 'edit global globals'
+    - 'view main assets'
+    - 'edit main assets'
+    - 'move main assets'
+    - 'rename main assets'
+    - 'upload main assets'
+    - 'delete main assets'
+    - 'view application form submissions'
+    - 'delete application form submissions'
+    - 'view contact form submissions'
+    - 'delete contact form submissions'
+    - 'view users'
+    - 'edit users'
+    - 'create users'
+    - 'delete users'
+    - 'change passwords'
+    - 'edit roles'

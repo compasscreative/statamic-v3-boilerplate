@@ -1,0 +1,35 @@
+title: 'Entry: Job Posts'
+taxonomies: false
+sections:
+  main:
+    fields:
+      -
+        handle: job_heading
+        field:
+          type: section
+          display: 'Job Details'
+          instructions: 'The information in a Job post follows the structure recommended by [Google Search Guidelines](https://developers.google.com/search/docs/data-types/job-posting#guidelines)'
+      -
+        handle: job_location
+        field:
+          type: text
+          display: Location
+          localizable: true
+          default: '{{ serving_area }}'
+      -
+        handle: estimated_salary
+        field:
+          type: text
+          instructions: 'e.g. $45K-80K / year'
+          display: 'Estimated Salary'
+          localizable: true
+      -
+        handle: employment_type
+        field:
+          type: text
+          display: 'Employment Type'
+          instructions: 'Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).'
+          localizable: true
+      -
+        import: content_bard
+

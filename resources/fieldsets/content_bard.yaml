@@ -1,0 +1,118 @@
+title: 'Partial: Content Replicator'
+taxonomies: false
+fields:
+  -
+    handle: main_content
+    field:
+      type: section
+      display: 'Main Content'
+  -
+    handle: content_blocks
+    field:
+      type: bard
+      display: 'Content Blocks'
+      sets:
+        image:
+          display: Image
+          fields:
+            -
+              handle: image
+              field:
+                type: assets
+                display: Image
+                container: images
+                folder: general
+                max_files: 1
+        gallery:
+          display: Gallery
+          fields:
+            -
+              handle: gallery_title
+              field:
+                type: text
+                display: 'Gallery Title'
+            -
+              handle: gallery_images
+              field:
+                type: assets
+                display: Images
+                container: images
+                folder: general
+        video:
+          display: Video
+          fields:
+            -
+              handle: video
+              field:
+                type: video
+                display: Video
+        button:
+          display: Button
+          fields:
+            -
+              handle: button_text
+              field:
+                type: text
+                width: 50
+                display: 'Button Text'
+            -
+              handle: button_url
+              field:
+                type: text
+                width: 50
+                display: 'Button URL'
+        pdf:
+          display: PDF
+          fields:
+            -
+              handle: pdfs
+              field:
+                type: grid
+                mode: table
+                add_row: 'Add a PDF'
+                fields:
+                  -
+                    handle: thumbnail
+                    field:
+                      type: assets
+                      container: images
+                      folder: documents
+                      restrict: true
+                      max_files: 1
+                      mode: grid
+                      width: 25
+                      display: Thumbnail
+                  -
+                    handle: pdf_document
+                    field:
+                      type: assets
+                      container: images
+                      folder: documents
+                      restrict: true
+                      max_files: 1
+                      mode: grid
+                      width: 25
+                      display: 'PDF Document'
+                  -
+                    handle: title
+                    field:
+                      type: text
+                      width: 50
+                      display: Title
+                display: PDFs
+        shim:
+          display: Shim
+          type: select
+          fields:
+            -
+              import: accent_color
+            -
+              handle: height
+              field:
+                type: select
+                display: Height
+                width: 33
+                options:
+                  section-pad-sm: Small
+                  section-pad: Medium
+                  section-pad-lg: Large

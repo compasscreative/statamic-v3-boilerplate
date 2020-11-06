@@ -1,0 +1,56 @@
+data:
+  site_name: 'Statamic Starter Kit'
+  serving_area: 'Stoney Creek'
+  primary_phone: 555.555.5555
+  primary_email: email@domain.com
+  primary_address: '201-1040 South Service Road'
+  primary_city: 'Stoney Creek'
+  primary_province: Ontario
+  primary_postal_code: 'L8E 6G3'
+  email_customer_message: |
+    Thank you for your message!
+    
+    Our team will respond promptly to your request.
+  office_hours:
+    -
+      day: Sunday
+      opens: '13:00'
+      closes: '17:00'
+      closed:
+        - 'True'
+    -
+      day: Monday
+      opens: '09:00'
+      closes: '17:00'
+    -
+      day: Tuesday
+      opens: '09:00'
+      closes: '17:00'
+    -
+      day: Wednesday
+      opens: '09:00'
+      closes: '17:00'
+    -
+      day: Thursday
+      opens: '09:00'
+      closes: '17:00'
+    -
+      day: Friday
+      opens: '09:00'
+      closes: '17:00'
+    -
+      day: Saturday
+      opens: '09:00'
+      closes: '17:00'
+      closed:
+        - 'True'
+  social_profiles:
+    -
+      social_profile_name: Facebook
+      social_profile_link: 'https://facebook.com'
+    -
+      social_profile_name: Twitter
+      social_profile_link: 'https://twitter.com/halsey'
+  office_latitude: '24'
+  office_longitude: '23'
+  office_logitude: '234'

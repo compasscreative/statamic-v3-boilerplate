@@ -1,0 +1,13 @@
+title: 'Application Form'
+honeypot: comment
+email:
+  -
+    to: '{{ env:NOTIFY_EMAIL default="hosting@compasscreative.ca" }}'
+    subject: 'Job Application from {{ name }}'
+    reply_to: '{{ email }}'
+    template: notify-admin-job-application
+  -
+    reply_to: '{{ env:NOTIFY_EMAIL default="hosting@compasscreative.ca" }}'
+    subject: 'Your application at {{ site_name }}'
+    to: '{{ email }}'
+    template: notify-applicant-job-application

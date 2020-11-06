@@ -1,4 +1,5 @@
-# admin:
-#   title: Administrators
-#   roles:
-#     - admin
+editors:
+  title: Editors
+  slug: editors
+  roles:
+    - editor

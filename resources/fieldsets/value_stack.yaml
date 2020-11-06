@@ -1,0 +1,42 @@
+title: 'Partial: Value Stack'
+taxonomies: false
+fields:
+  -
+    handle: value_stack_section
+    field:
+      type: section
+      display: 'Value Stack'
+  -
+    handle: value_stack
+    field:
+      type: grid
+      instructions: 'What the company offers'
+      mode: stacked
+      display: Items
+      fields:
+        -
+          handle: heading
+          field:
+            type: text
+        -
+          handle: copy
+          field:
+            type: textarea
+        -
+          handle: image
+          field:
+            type: assets
+            container: images
+            max_files: 1
+        -
+          handle: button_text
+          field:
+            type: text
+            display: 'Button Text'
+            width: 50
+        -
+          handle: button_url
+          field:
+            type: text
+            display: 'Button URL'
+            width: 50

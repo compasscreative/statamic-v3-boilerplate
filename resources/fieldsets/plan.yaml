@@ -1,0 +1,40 @@
+title: 'Partial: Plan'
+taxonomies: false
+fields:
+  -
+    handle: plan_section
+    field:
+      type: section
+      display: Plan
+  -
+    handle: plan_heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: plan_subheading
+    field:
+      type: text
+      display: Subheading
+  -
+    handle: plan_steps
+    field:
+      type: grid
+      display: Steps
+      instructions: 'How to get it'
+      mode: stacked
+      fields:
+        -
+          handle: heading
+          field:
+            type: text
+        -
+          handle: copy
+          field:
+            type: textarea
+        -
+          handle: image
+          field:
+            type: assets
+            container: images
+            max_files: 1

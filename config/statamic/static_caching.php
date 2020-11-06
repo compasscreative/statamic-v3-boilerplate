@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'strategy' => env('STATIC_CACHING_STRATEGY', null),
+    'strategy' => env('STATAMIC_STATIC_CACHING_STRATEGY', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     | flushed from the static cache. See the documentation for more details.
     | If a custom class is not defined, the default invalidator is used.
     |
-    | https://docs.statamic.com/static-caching
+    | https://statamic.dev/static-caching
     |
     */
 

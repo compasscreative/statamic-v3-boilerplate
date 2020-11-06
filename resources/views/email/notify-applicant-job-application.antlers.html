@@ -1,0 +1,26 @@
+Position: {{ position }}
+Name: {{ name }}
+Email: {{ email }}
+Phone: {{ phone }}
+Resumé: {{ site_url}}{{ resume }}
+Message: {{ message | nl2br }}
+
+---
+
+<div style="padding: 40px; line-height: 1.5; font-family: sans-serif; background-color: #f4f4f4; color: #2c2c2c">
+
+    <p>Note: this email is a notification from your website. Marking this email as spam will discontinue your lead notifications.</p>
+
+    <div style="margin-bottom: 40px">
+        <h3 style="font-size: 20px">{{ name }},</h3>
+        <p>Thank you for submitting your application. This email confirms your form submission.</p>
+    </div>
+
+    <div style="font-family: sans-serif; background-color: #fff; box-shadow: 10px 10px 30px rgba(20,20,10,.2)">
+        <div style="padding: 12px 12px 12px 40px; background: #eeeeee; font-size: 12px; text-transform: uppercase; margin-bottom: 24px; letter-spacing: 1px;"><small>Submitted information</small></div>
+        <div style="padding: 20px 40px 60px;">
+            {{ partial:form_notification_fields_job_application }}
+        </div>
+    </div>
+
+</div>

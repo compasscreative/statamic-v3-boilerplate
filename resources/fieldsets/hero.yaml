@@ -1,0 +1,47 @@
+title: 'Partial: Hero'
+taxonomies: false
+fields:
+  -
+    handle: main_banner
+    field:
+      type: section
+      display: Banner
+  -
+    handle: banner
+    field:
+      type: assets
+      display: Image
+      container: images
+      folder: banners
+      max_files: 1
+  -
+    handle: pre_heading
+    field:
+      type: text
+      instructions: 'Optional, small text above title'
+      display: Pre-Heading
+  -
+    handle: heading
+    field:
+      type: text
+      instructions: 'Optional, replaces title of page'
+      display: Heading
+  -
+    handle: intro
+    field:
+      type: textarea
+      display: Intro
+  -
+    handle: call_to_action_text
+    field:
+      type: text
+      display: 'Call to Action'
+      instructions: Optional
+      width: 50
+  -
+    handle: call_to_action_url
+    field:
+      type: text
+      display: 'Call to Action'
+      instructions: Optional
+      width: 50

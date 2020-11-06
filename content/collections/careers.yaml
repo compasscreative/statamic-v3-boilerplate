@@ -1,0 +1,8 @@
+title: Careers
+template: job_posting
+route: '/careers/{slug}'
+date: true
+date_behavior:
+  past: public
+  future: unlisted
+sort_dir: desc

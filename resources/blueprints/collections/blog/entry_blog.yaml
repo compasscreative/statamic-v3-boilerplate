@@ -1,0 +1,80 @@
+title: 'Entry: Blog Post'
+taxonomies: false
+fields:
+  -
+    handle: blog_post_feature_image
+    field:
+      type: assets
+      display: 'Feature Image'
+      container: images
+      folder: blog
+      max_files: 1
+  -
+    handle: category
+    field:
+      type: text
+  -
+    handle: intro
+    field:
+      type: bard
+      display: Summary
+      instructions: 'A short paragraph to show on the blog listing page'
+      save_html: true
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - html
+        - quote
+        - codeblock
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+  -
+    handle: images
+    field:
+      type: grid
+      display: Images
+      fields:
+        -
+          handle: url
+          field:
+            type: assets
+            container: images
+            display: Image
+            max_files: 1
+        -
+          handle: alt
+          field:
+            type: text
+            display: alt
+  -
+    handle: staff_author
+    field:
+      type: entries
+      max_items: '1'
+      mode: tags
+      display: 'Staff Author'
+      collections:
+        - team
+  -
+    handle: guest_author_name
+    field:
+      type: text
+      width: 50
+      display: 'Guest Author Name'
+      instructions: 'Guest Author will not show if there is a Staff Author also assigned'
+  -
+    handle: guest_author_url
+    field:
+      type: text
+      width: 50
+      display: 'Guest Author URL'
+      instructions: 'Link to website of guest author'
+  -
+    import: content_bard
+

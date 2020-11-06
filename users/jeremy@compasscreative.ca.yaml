@@ -1,4 +1,6 @@
-name: Jeremy
+roles:
+  - admin
 super: true
-id: e9b4b38d-cb49-4df9-b36a-2f775f95126c
-password_hash: $2y$10$sz0Hje4NqxBzEgU1b9dKnOZSreAwbefO7uubiFjGRfHtu2QKT3IKO
+name: 'Jeremy Hoover'
+id: 3e8d11a3-1d0f-400a-ba42-6b3940b7d9d0
+password_hash: $2y$10$5odL.Rk.tidQ7a8WUtKK5.ZkqMyE.P0.8fQu8aawCEOdSnAHBofs6

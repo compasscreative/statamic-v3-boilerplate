@@ -1,0 +1,8 @@
+title: 'Blog Posts'
+template: blog_entry
+route: '/blog/{slug}'
+date: true
+date_behavior:
+  past: public
+  future: unlisted
+sort_dir: desc

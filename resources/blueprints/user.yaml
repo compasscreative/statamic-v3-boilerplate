@@ -1,29 +1,35 @@
-title: User
+taxonomies: false
 fields:
   -
-    handle: name
+    handle: username
     field:
       type: text
-      display: Name
-  -
-    handle: email
-    field:
-      type: text
-      input: email
-      display: Email Address
+      display: Username
+      width: 50
   -
     handle: roles
     field:
       type: user_roles
       width: 50
   -
-    handle: groups
+    handle: email
     field:
-      type: user_groups
+      type: text
+      display: 'Email address'
+  -
+    handle: first_name
+    field:
+      type: text
+      display: 'First Name'
       width: 50
   -
-    handle: avatar
+    handle: last_name
     field:
-      type: assets
-      max_files: 1
-      container: assets
+      type: text
+      display: 'Last Name'
+      width: 50
+  -
+    handle: content
+    field:
+      type: textarea
+      display: Biography

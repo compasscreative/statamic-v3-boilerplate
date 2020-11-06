@@ -59,7 +59,7 @@ return [
     */
 
     'new_user_roles' => [
-        //
+        'admin',
     ],
 
     /*

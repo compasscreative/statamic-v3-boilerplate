@@ -1,0 +1,14 @@
+title: 'Entry: Featured Project'
+taxonomies: false
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        import: hero
+      -
+        import: content_bard
+      -
+        import: gallery
+
+

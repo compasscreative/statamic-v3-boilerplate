@@ -10,7 +10,10 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
-        "statamic/cms": "3.0.*"
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "league/flysystem-cached-adapter": "^1.1",
+        "silentz/akismet": "^2.2",
+        "statamic/cms": "3.0.24"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
