@@ -63,11 +63,8 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
-            'cache' => [
-                'store' => 'file',
-                'expire' => 600,
-                'prefix' => 'cache-prefix',
-            ],
+            'cache' => true,
+            'visibility' => 'public'
         ],
 
     ],
