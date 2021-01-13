@@ -1,4 +1,4 @@
-title: 'Entry: Blog Post'
+title: 'Posts'
 taxonomies: false
 fields:
   -
@@ -6,7 +6,7 @@ fields:
     field:
       type: assets
       display: 'Feature Image'
-      container: images
+      container: assets
       folder: blog
       max_files: 1
   -
@@ -44,7 +44,7 @@ fields:
           handle: url
           field:
             type: assets
-            container: images
+            container: assets
             display: Image
             max_files: 1
         -
@@ -76,5 +76,5 @@ fields:
       display: 'Guest Author URL'
       instructions: 'Link to website of guest author'
   -
-    import: content_bard
+    import: content
 

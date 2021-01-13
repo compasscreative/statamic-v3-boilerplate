@@ -38,19 +38,17 @@ return [
     */
 
     'widgets' => [
-        'getting_started',
-        [
-            'type' => 'form',
-            'form' => 'contact',
-            'limit' => 5,
-            'title' => 'Recent Submissions',
-            'fields' => [
-                'name',
-                'email',
-            ],
-            'width' => 33,
-],
-            ],
+            [
+                'type' => 'form',
+                'form' => 'contact',
+                'limit' => 5,
+                'title' => 'Recent Submissions',
+                'fields' => [
+                        'name',
+                        'email'
+                ]
+            ]
+        ],
 
             /*
     |--------------------------------------------------------------------------

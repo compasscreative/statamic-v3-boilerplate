@@ -1,47 +1,57 @@
-title: 'Partial: Hero'
-taxonomies: false
+title: Hero
 fields:
   -
-    handle: main_banner
-    field:
-      type: section
-      display: Banner
-  -
-    handle: banner
-    field:
-      type: assets
-      display: Image
-      container: images
-      folder: banners
-      max_files: 1
-  -
-    handle: pre_heading
+    handle: hero_label
     field:
       type: text
       instructions: 'Optional, small text above title'
-      display: Pre-Heading
+      display: Label
+      listable: hidden
+      input_type: text
+      antlers: false
   -
-    handle: heading
+    handle: hero_heading
     field:
       type: text
-      instructions: 'Optional, replaces title of page'
+      instructions: 'Main heading on the page, you probably should fill this in.'
       display: Heading
+      listable: hidden
+      input_type: text
+      antlers: false
   -
-    handle: intro
+    handle: hero_image
+    field:
+      type: assets
+      display: Image
+      container: assets
+      folder: systems
+      max_files: 1
+      listable: hidden
+      mode: grid
+      restrict: false
+      allow_uploads: true
+  -
+    handle: hero_intro
     field:
       type: textarea
       display: Intro
+      listable: hidden
+      antlers: false
   -
-    handle: call_to_action_text
+    handle: hero_call_to_action_text
     field:
       type: text
       display: 'Call to Action'
       instructions: Optional
       width: 50
+      listable: hidden
+      input_type: text
+      antlers: false
   -
-    handle: call_to_action_url
+    handle: hero_call_to_action_url
     field:
-      type: text
-      display: 'Call to Action'
-      instructions: Optional
+      display: 'Button Link'
+      type: link
+      icon: link
       width: 50
+      listable: hidden

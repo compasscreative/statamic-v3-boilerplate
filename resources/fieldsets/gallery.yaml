@@ -1,4 +1,4 @@
-title: 'Partial: Gallery'
+title: 'Gallery'
 taxonomies: false
 fields:
   -
@@ -10,16 +10,16 @@ fields:
     handle: gallery_heading
     field:
       type: text
-      display: Heading
+      display: Label
   -
     handle: gallery_subheading
     field:
       type: text
-      display: 'Sub Heading'
+      display: 'Heading'
   -
     handle: gallery_images
     field:
       type: assets
       display: Images
-      container: images
+      container: assets
       folder: gallery

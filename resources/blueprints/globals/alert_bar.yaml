@@ -1,0 +1,21 @@
+title: 'Alert Bar'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: alert_bar_heading
+        field:
+          input_type: text
+          display: Heading
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: alert_bar_message
+        field:
+          display: Message
+          type: bard
+          icon: bard
+          listable: hidden
+          antlers: false

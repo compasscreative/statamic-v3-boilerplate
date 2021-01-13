@@ -1,4 +1,4 @@
-title: Default
+title: Page
 taxonomies: false
 sections:
   main:
@@ -7,7 +7,7 @@ sections:
       -
         import: hero
       -
-        import: content_bard
+        import: content
       -
         import: gallery
 

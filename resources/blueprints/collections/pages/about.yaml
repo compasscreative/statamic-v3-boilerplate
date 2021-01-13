@@ -1,4 +1,4 @@
-title: 'Page: About'
+title: 'About'
 taxonomies: false
 sections:
   main:
@@ -7,7 +7,7 @@ sections:
       -
         import: hero
       -
-        import: content_bard
+        import: content
       -
         handle: team_heading
         field:
@@ -25,7 +25,7 @@ sections:
               field:
                 type: assets
                 display: Logo
-                container: images
+                container: assets
                 folder: /associations
                 max_files: 1
             -

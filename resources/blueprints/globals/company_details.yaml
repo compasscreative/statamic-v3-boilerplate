@@ -1,0 +1,177 @@
+sections:
+  social_media:
+    display: 'Social Media'
+    fields:
+      -
+        handle: social_media
+        field:
+          sets:
+            facebook:
+              display: Facebook
+              fields:
+                -
+                  handle: url
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'https://www.facebook.com/'
+                    display: URL
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'https://www.facebook.com/'
+            instagram:
+              display: Instagram
+              fields:
+                -
+                  handle: url
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'https://www.instagram.com/'
+                    display: URL
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'https://www.instagram.com/'
+            linkedin:
+              display: LinkedIn
+              fields:
+                -
+                  handle: url
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'https://www.linkedin.com/'
+                    display: URL
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'https://www.linkedin.com/'
+            twitter:
+              display: Twitter
+              fields:
+                -
+                  handle: url
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'https://www.twitter.com/'
+                    display: URL
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'https://www.twitter.com/'
+            houzz:
+              display: Houzz
+              fields:
+                -
+                  handle: url
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'https://www.houzz.com/pro/'
+                    display: URL
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'https://www.houzz.com/pro/'
+            youtube:
+              display: YouTube
+              fields:
+                -
+                  handle: url
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'https://www.youtube.com/'
+                    display: URL
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'https://www.youtube.com/'
+          type: replicator
+          listable: hidden
+          display: 'Social media'
+      -
+        handle: email
+        field:
+          input_type: text
+          display: Email
+          type: text
+          icon: text
+          listable: hidden
+          validate:
+            - email
+      -
+        handle: phone
+        field:
+          input_type: text
+          display: Phone
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: address_1
+        field:
+          input_type: text
+          display: 'Address 1'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: address_2
+        field:
+          input_type: text
+          display: 'Address 2'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: city
+        field:
+          input_type: text
+          display: City
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: state
+        field:
+          input_type: text
+          display: State
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: zip_code
+        field:
+          input_type: text
+          display: 'Zip Code'
+          type: text
+          icon: text
+          listable: hidden

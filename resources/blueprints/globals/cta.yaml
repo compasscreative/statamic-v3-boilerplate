@@ -1,0 +1,11 @@
+sections:
+  form:
+    display: Form
+    fields:
+      -
+        import: form
+  plan:
+    display: Plan
+    fields:
+      -
+        import: plan

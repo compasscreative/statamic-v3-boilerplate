@@ -1,5 +1,5 @@
 taxonomies: false
-title: 'Partial: Accent Color'
+title: 'Accent Color'
 fields:
   -
     handle: accent_color

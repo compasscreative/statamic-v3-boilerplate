@@ -1,5 +1,4 @@
-title: 'Partial: Plan'
-taxonomies: false
+title: Plan
 fields:
   -
     handle: plan_section
@@ -33,8 +32,13 @@ fields:
           field:
             type: textarea
         -
-          handle: image
+          handle: icon_name
           field:
-            type: assets
-            container: images
-            max_files: 1
+            input_type: text
+            antlers: false
+            display: 'Icon Name'
+            type: text
+            icon: text
+            listable: hidden
+      listable: hidden
+      reorderable: true

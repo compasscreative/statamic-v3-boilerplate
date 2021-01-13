@@ -3,36 +3,44 @@ fields:
   -
     handle: name
     field:
-      type: text
+      input_type: text
+      antlers: false
       display: Name
-      validate: 'required|min:2'
-      required: true
-      placeholder: 'Your name'
+      type: text
+      icon: text
+      listable: hidden
   -
     handle: email
     field:
-      type: text
+      input_type: text
+      antlers: false
       display: Email
-      validate: required|email
-      required: true
-      placeholder: you@email.com
+      type: text
+      icon: text
+      listable: hidden
   -
     handle: phone
     field:
-      type: text
+      input_type: text
+      antlers: false
       display: Phone
-      placeholder: '(555) 555-5555'
-      listable: false
-  -
-    handle: location
-    field:
       type: text
-      display: Location
-      placeholder: 'City, State / Prov'
-      listable: false
+      icon: text
+      listable: hidden
   -
-    handle: message
+    handle: address
     field:
-      type: textarea
+      input_type: text
+      antlers: false
+      display: Address
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: message_text
+    field:
+      antlers: false
       display: Message
-      listable: false
+      type: textarea
+      icon: textarea
+      listable: hidden

@@ -1,15 +1,16 @@
 module.exports = {
     purge: {
-      content: [
-        './resources/**/*.antlers.html',
-        './resources/**/*.blade.php',
-        './content/**/*.md'
-      ]
+        content: [
+            "./resources/**/*.antlers.html",
+            "./resources/**/*.blade.php",
+            "./content/**/*.md",
+        ],
     },
+    darkMode: false, // or 'media' or 'class'
     important: true,
     theme: {
-      extend: {},
+        extend: {},
     },
     variants: {},
     plugins: [],
-  }
+};

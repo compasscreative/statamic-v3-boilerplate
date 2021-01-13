@@ -1,0 +1,65 @@
+order: 1
+title: Employee
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+          display: Name
+          listable: true
+          input_type: text
+          antlers: false
+      -
+        handle: image
+        field:
+          mode: grid
+          container: assets
+          folder: employees
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: Photo
+          type: assets
+          icon: assets
+          listable: true
+      -
+        handle: position
+        field:
+          input_type: text
+          antlers: false
+          display: Position
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: phone
+        field:
+          input_type: text
+          antlers: false
+          display: Phone
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: email
+        field:
+          input_type: text
+          antlers: false
+          display: Email
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: bio
+        field:
+          antlers: false
+          display: Bio
+          type: textarea
+          icon: textarea
+          listable: hidden

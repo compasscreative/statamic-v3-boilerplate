@@ -1,16 +1,12 @@
 order: 1
-title: Default
+title: Product
 sections:
   main:
     display: Main
     fields:
       -
-        handle: title
-        field:
-          type: text
-          required: true
+        import: hero
       -
-        handle: content
-        field:
-          type: markdown
-          localizable: true
+        import: content
+      -
+        import: gallery

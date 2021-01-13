@@ -1,0 +1,415 @@
+title: Content
+fields:
+  -
+    handle: content_blocks
+    field:
+      type: bard
+      display: 'Content Blocks'
+      sets:
+        image:
+          display: Image
+          fields:
+            -
+              handle: image
+              field:
+                type: assets
+                display: Image
+                container: assets
+                folder: general
+                max_files: 1
+        gallery:
+          display: Gallery
+          fields:
+            -
+              handle: gallery_heading
+              field:
+                type: text
+                display: Label
+            -
+              handle: gallery_subheading
+              field:
+                type: text
+                display: 'Heading'
+            -
+              handle: gallery_images
+              field:
+                type: assets
+                display: Images
+                container: assets
+                folder: general
+        video:
+          display: Video
+          fields:
+            -
+              handle: video
+              field:
+                type: video
+                display: Video
+            -
+              handle: image
+              field:
+                mode: grid
+                restrict: false
+                allow_uploads: true
+                display: 'Video Image'
+                type: assets
+                icon: assets
+                instructions: 'Thumbnail image to be used for video.'
+                listable: hidden
+                container: assets
+                max_files: 1
+                folder: video-thumbnails
+        button:
+          display: Button
+          fields:
+            -
+              handle: button_text
+              field:
+                type: text
+                width: 50
+                display: 'Button Text'
+            -
+              handle: button_url
+              field:
+                type: text
+                width: 50
+                display: 'Button URL'
+        pdf:
+          display: PDF
+          fields:
+            -
+              handle: pdfs
+              field:
+                type: grid
+                mode: table
+                add_row: 'Add a PDF'
+                fields:
+                  -
+                    handle: thumbnail
+                    field:
+                      type: assets
+                      container: assets
+                      folder: documents
+                      restrict: true
+                      max_files: 1
+                      mode: grid
+                      width: 25
+                      display: Thumbnail
+                  -
+                    handle: pdf_document
+                    field:
+                      type: assets
+                      container: assets
+                      folder: documents
+                      restrict: true
+                      max_files: 1
+                      mode: grid
+                      width: 25
+                      display: 'PDF Document'
+                  -
+                    handle: title
+                    field:
+                      type: text
+                      width: 50
+                      display: Title
+                display: PDFs
+        testimonial:
+          display: Testimonial
+          fields:
+            -
+              handle: testimonial
+              field:
+                mode: default
+                collections:
+                  - testimonials
+                display: Testimonial
+                type: entries
+                icon: entries
+                listable: hidden
+        value_stack:
+          display: 'Value Stack'
+          fields:
+            -
+              import: value_stack
+        shim:
+          display: Shim
+          type: select
+          fields:
+            -
+              handle: height
+              field:
+                type: select
+                display: Height
+                width: 33
+                options:
+                  py-4: Small
+                  py-8: Medium
+                  py-12: Large
+        employees:
+          display: Employees
+          fields:
+            -
+              handle: employee_list
+              field:
+                display: 'Employee list'
+                type: section
+                icon: section
+                instructions: '[Edit employees](/cp/collections/employees)'
+                listable: hidden
+        callout:
+          display: Callout
+          fields:
+            -
+              handle: label
+              field:
+                input_type: text
+                antlers: false
+                display: Label
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: heading
+              field:
+                input_type: text
+                antlers: false
+                display: Heading
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: copy
+              field:
+                antlers: false
+                display: Copy
+                type: textarea
+                icon: textarea
+                listable: hidden
+            -
+              handle: button_text
+              field:
+                input_type: text
+                antlers: false
+                display: 'Button Text'
+                type: text
+                icon: text
+                width: 50
+                listable: hidden
+            -
+              handle: button_url
+              field:
+                display: 'Button Link'
+                type: link
+                icon: link
+                width: 50
+                listable: hidden
+        card_list:
+          display: 'Card List'
+          fields:
+            -
+              handle: label
+              field:
+                input_type: text
+                antlers: false
+                display: Label
+                type: text
+                icon: text
+                listable: hidden
+                width: 50
+            -
+              handle: style
+              field:
+                options:
+                  light: Light
+                  dark: Dark
+                multiple: false
+                clearable: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                display: Style
+                type: select
+                icon: select
+                listable: hidden
+                width: 50
+            -
+              handle: heading
+              field:
+                input_type: text
+                antlers: false
+                display: Heading
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: copy
+              field:
+                antlers: false
+                display: Copy
+                type: textarea
+                icon: textarea
+                listable: hidden
+            -
+              handle: cards
+              field:
+                fields:
+                  -
+                    handle: heading
+                    field:
+                      input_type: text
+                      antlers: false
+                      display: Heading
+                      type: text
+                      icon: text
+                      listable: hidden
+                  -
+                    handle: copy
+                    field:
+                      antlers: false
+                      display: Copy
+                      type: textarea
+                      icon: textarea
+                      listable: hidden
+                  -
+                    handle: icon_name
+                    field:
+                      input_type: text
+                      antlers: false
+                      display: 'Icon name'
+                      type: text
+                      icon: text
+                      listable: hidden
+                mode: table
+                reorderable: true
+                display: Cards
+                type: grid
+                icon: grid
+                listable: hidden
+                add_row: 'Add card'
+        form:
+          display: Form
+          fields:
+            -
+              import: form
+        plan:
+          display: Plan
+          fields:
+            -
+              import: plan
+        prominent_list:
+          display: 'Prominent List'
+          fields:
+            -
+              handle: label
+              field:
+                input_type: text
+                antlers: false
+                display: Label
+                type: text
+                icon: text
+                listable: hidden
+                width: 50
+            -
+              handle: style
+              field:
+                options:
+                  light: Light
+                  dark: Dark
+                multiple: false
+                clearable: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                display: Style
+                type: select
+                icon: select
+                listable: hidden
+                width: 50
+            -
+              handle: heading
+              field:
+                input_type: text
+                antlers: false
+                display: Heading
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: copy
+              field:
+                antlers: false
+                display: Copy
+                type: textarea
+                icon: textarea
+                listable: hidden
+            -
+              handle: image
+              field:
+                mode: grid
+                container: assets
+                folder: systems
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: items
+              field:
+                fields:
+                  -
+                    handle: heading
+                    field:
+                      input_type: text
+                      antlers: false
+                      display: Heading
+                      type: text
+                      icon: text
+                      listable: hidden
+                  -
+                    handle: image
+                    field:
+                      mode: grid
+                      container: assets
+                      folder: systems
+                      restrict: false
+                      allow_uploads: true
+                      max_files: 1
+                      display: Image
+                      type: assets
+                      icon: assets
+                      listable: hidden
+                mode: table
+                reorderable: true
+                display: Items
+                type: grid
+                icon: grid
+                listable: hidden
+                add_row: 'Add item'
+      listable: hidden
+      always_show_set_button: true
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - underline
+        - code
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true

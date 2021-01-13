@@ -36,7 +36,7 @@ fields:
     field:
       type: asset
       display: Resumé
-      container: images
+      container: assets
       folder: form-submissions
       listable: false
   -

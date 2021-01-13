@@ -12,8 +12,9 @@
         "laravel/tinker": "^2.0",
         "league/flysystem-aws-s3-v3": "^1.0",
         "league/flysystem-cached-adapter": "^1.1",
-        "silentz/akismet": "^2.2",
-        "statamic/cms": "3.0.24"
+        "silentz/akismet": "^3.0",
+        "statamic/cms": "^3.0.0",
+        "withcandour/aardvark-seo": "^2.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

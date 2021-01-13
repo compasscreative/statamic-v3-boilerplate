@@ -52,7 +52,7 @@ return [
         |
         */
 
-        'cache' => false,
+        'cache' => env('SAVE_CACHED_IMAGES', false),
         'cache_path' => public_path('img'),
 
         /*

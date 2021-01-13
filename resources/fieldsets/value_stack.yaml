@@ -1,19 +1,57 @@
-title: 'Partial: Value Stack'
-taxonomies: false
+title: 'Value Stack'
 fields:
   -
-    handle: value_stack_section
+    handle: value_stack_inline
     field:
-      type: section
-      display: 'Value Stack'
+      display: Inline
+      type: toggle
+      icon: toggle
+      instructions: 'Keep the below items on a single row for larger screens'
+      listable: hidden
   -
     handle: value_stack
     field:
       type: grid
-      instructions: 'What the company offers'
       mode: stacked
-      display: Items
+      display: 'Value Stack Items'
       fields:
+        -
+          handle: image
+          field:
+            type: assets
+            container: assets
+            max_files: 1
+            listable: hidden
+            mode: grid
+            restrict: false
+            allow_uploads: true
+            width: 50
+        -
+          handle: icon_name
+          field:
+            input_type: text
+            antlers: false
+            display: 'Icon Name'
+            type: text
+            icon: text
+            listable: hidden
+            width: 50
+        -
+          handle: video
+          field:
+            display: Video
+            type: video
+            icon: video
+            listable: hidden
+        -
+          handle: label
+          field:
+            input_type: text
+            antlers: false
+            display: Label
+            type: text
+            icon: text
+            listable: hidden
         -
           handle: heading
           field:
@@ -21,13 +59,29 @@ fields:
         -
           handle: copy
           field:
-            type: textarea
-        -
-          handle: image
-          field:
-            type: assets
-            container: images
-            max_files: 1
+            always_show_set_button: false
+            buttons:
+              - h2
+              - h3
+              - bold
+              - italic
+              - unorderedlist
+              - orderedlist
+              - removeformat
+              - anchor
+              - underline
+            save_html: false
+            toolbar_mode: fixed
+            link_noopener: false
+            link_noreferrer: false
+            target_blank: false
+            reading_time: false
+            fullscreen: true
+            allow_source: true
+            display: Copy
+            type: bard
+            icon: bard
+            listable: hidden
         -
           handle: button_text
           field:
@@ -37,6 +91,10 @@ fields:
         -
           handle: button_url
           field:
-            type: text
-            display: 'Button URL'
-            width: 50
+            display: 'Button Link'
+            type: link
+            icon: link
+            listable: hidden
+      listable: hidden
+      reorderable: true
+      add_row: 'Add item'
