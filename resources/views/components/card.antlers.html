@@ -1,0 +1,21 @@
+<{{ tag or 'a' }} {{ if !tag }}href="{{ url or p_url }}"{{ /if }} class="block rounded bg-white overflow-hidden shadow-md {{ if !tag }}group hover:shadow-xl transition-all duration-300{{ /if }}">
+  {{ assets:hero_image }}
+  {{ partial:components/card_image }}
+  {{ /assets:hero_image }}
+  <div class="p-4 lg:p-8">
+    <h2 class="text-lg lg:text-2xl m-0 group-hover:text-orange-400 transition-color duration-300">{{ title }}</h2>
+    <div class="mt-2">
+      {{ copy }}
+    </div>
+    {{ if phone }}
+    <div class="my-1">
+      <a class="hover:underline" style="line-break: anywhere" href="tel:{{ phone }}">{{ phone }}</a>
+    </div>
+    {{ /if }}
+    {{ if email }}
+    <div>
+      <a class="hover:underline" style="line-break: anywhere" href="mailto:{{ email }}">{{ email }}</a>
+    </div>
+    {{ /if }}
+  </div>
+</{{ tag or 'a' }}>

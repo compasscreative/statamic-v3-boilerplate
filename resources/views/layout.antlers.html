@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-900">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ aardvark-seo:head }}
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+      {{ theme:output src="../public/css/flexible-type.css" }}
+    </style>
+    <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+    <style>
+      [x-cloak] { display: none; }
+    </style>
+    <script src="/js/alpine.js" defer></script>
+  </head>
+
+  <body>
+    {{ aardvark-seo:body }}
+    {{ cache scope="page" }}
+    {{ partial:components/navbar }}
+    {{ /cache }}
+    <div>
+      {{ template_content }}
+    </div>
+    {{ cache scope="page" }}
+    {{ partial:components/footer }}
+    {{ /cache }}
+    {{ partial:components/alert-bar }}
+    {{ aardvark-seo:footer }}
+    <script src="{{ theme:js src="site.js" cache_bust="true" }}"></script>
+    <link rel="stylesheet" href="/css/glightbox.css">
+    <style>
+      .gbtn {
+        background-color: transparent !important;
+      }
+    </style>
+  </body>
+</html>

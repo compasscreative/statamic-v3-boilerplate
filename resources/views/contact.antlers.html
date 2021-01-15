@@ -1,0 +1,60 @@
+{{ cache scope="page" }}
+<div class="bg-slash bg-slash-right">
+  {{ partial:components/hero text_color=" text-gray-900 " }}
+</div>
+
+<div class="container mx-auto px-8 py-24">
+  <ul class="md:grid md:grid-cols-3 gap-4">
+    <li class="mb-6">
+      <a class="relative pl-10 block text-2xl text-gray-900 hover:underline" href="tel:{{ company_details:phone }}">
+        <div class="absolute top-0 left-0">
+          {{ svg src="phone.svg" }}
+        </div>
+        <span style="word-wrap: break-word">{{ company_details:phone }}</span>
+      </a>
+    </li>
+    <li class="mb-6">
+      <a class="relative pl-10 block text-2xl text-gray-900 hover:underline" href="mailto:{{ company_details:email }}">
+        <div class="absolute top-0 left-0" style="top: 6px">
+          {{ svg src="envelope.svg" }}
+        </div>
+        <span style="word-wrap: break-word">{{ company_details:email }}</span>
+      </a>
+    </li>
+    <li>
+      <a class="relative pl-10 block text-2xl text-gray-900 hover:underline" title="View on Google Maps" target="_blank" href="https://www.google.com/maps/search/{{ company_details:address_1 }}+{{ company_details:city }}+{{ company_details:state }}+{{ company_details:zip_code }}">
+        <div class="absolute top-0 left-0">
+          {{ svg src="pin.svg" }}
+        </div>
+        <address>
+          {{ company_details:address_1 }} <br>
+          {{ company_details:city }}, {{ company_details:state }} <br>
+          {{ company_details:zip_code }}
+        </address>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="container mx-auto px-8 pb-24">
+  <ul class="md:flex md:-mx-8 justify-center">
+    {{ relate:contacts }}
+    <li class="md:px-8 md:min-w-1/2 {{ if !last }}mb-16 md:mb-0{{ /if }}">
+      <div class="display-3 lg:text-2xl mb-8">{{ position }}</div>
+      <div class="flex items-center">
+        {{ if hero_image }}
+        <div class="w-32 h-32 bg-gray-200 mr-4">
+            {{ partial:components/card_image :url="hero_image" height="h-full" width="w-32" }}
+        </div>
+        {{ /if }}
+        <div class="">
+          <h2 class="mt-0 text-xl font-display">{{ title }}</h2>
+          <div class="mb-1"><a class="hover:underline" href="tel:{{ phone }}">{{ phone }}</a></div>
+          <div><a class="hover:underline text-orange-400" style="line-break: anywhere" href="mailto:{{ email }}">{{ email }}</a></div>
+        </div>
+      </div>
+    </li>
+    {{ /relate:contacts }}
+  </ul>
+</div>
+{{ /cache }}

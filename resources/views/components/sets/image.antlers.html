@@ -1,0 +1,6 @@
+{{ assets:image }}
+<picture>
+  <source data-srcset="{{ glide:id height="1600" fm="webp" }}" type="image/webp">
+    <img style="max-height: 800px; max-width: 1800px" class="lazyload object-cover object-center w-full mx-auto"  data-src="{{ glide:id height="1600" fm="jpg" }}" alt="{{ alt }}">
+</picture>
+{{ /assets:image }}

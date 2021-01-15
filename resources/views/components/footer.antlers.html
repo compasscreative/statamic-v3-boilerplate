@@ -1,0 +1,64 @@
+{{# The sites footer rendered on each page. #}}
+<footer class="w-full py-8 lg:py-16 text-white font-display-light">
+    <div class="container mx-auto px-8">
+      <div class="lg:flex">
+        <div class="lg:mr-12 mb-12">
+          <a title="Go to Home page" aria-label="Home page" href="/">
+          {{ partial:components/logo }}
+          </a>
+        </div>
+
+        <nav class="mb-10">
+          <ul class="grid md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-2 xxl:gap-8">
+              {{ nav:footer max_depth="2" }}
+                <li class="{{ if !children }}single{{ /if }}">
+                  {{ if url }}
+                  <a class="opacity-75 hover:opacity-100 transition-color duration-300 whitespace-nowrap" href="{{ url }}">
+                  {{ else }}
+                  <div class="text-orange-400 text-xs uppercase mb-1 tracking-wide mt-2 md:mt-0 lg:mt-2 xl:mt-0">
+                  {{ /if }}
+                  <div class="">{{ title }}</div>
+                  {{ if url }}
+                  </a>
+                  {{ else }}
+                  </div>
+                  {{ /if}}
+                  {{ if is_current || is_parent }}
+                      {{ if children }}
+                        <ul>{{ *recursive children* }}</ul>
+                      {{ /if }}
+                  {{ /if }}
+                </li>
+              {{ /nav:footer }}
+          </ul>
+        </nav>
+
+        {{ company_details }}
+            <div class="lg:ml-auto lg:border-l-1 border-gray-400 border-opacity-50 lg:pl-8 font-display-light">
+              <p class="text-xl text-orange-400 mb-2"><a href="tel:{{ phone }}">{{ phone }}</a></p>
+              <div class="mb-1"><a href="mailto:{{ email }}">{{ email }}</a></div>
+              <address class="not-italic text-gray-200">
+                {{address_1 }} <br>
+                {{ city }}, {{ state }} <br>
+                {{ zip_code }}
+              </address>
+
+              {{ if social_media }}
+                  <ul class="mt-6 flex space-x-6 items-center justify-center">
+                      {{ social_media }}
+                      <li>
+                          <a class="hover:text-primary-100" href="{{ prefix }}{{ url }}" rel="noopener" aria-label="{{ type | title }}" target="_blank">{{ svg :src="type" class="h-6 fill-current" }}</a>
+                      </li>
+                      {{ /social_media }}
+                  </ul>
+              {{ /if }}
+            </div>
+        {{ /company_details }}
+      </div>
+
+      <div class="opacity-50 pb-8 text-xs">
+          <p>Copyright {{ config:app:name }} <span class="mx-2">|</span> <a class="hover:text-primary-100" href="/privacy-policy">Privacy Policy</a></p>
+          <p class="mt-1">Website design by <a class="hover:text-primary-100" href="https://compasscreative.ca" target="_blank">Compass Creative</a></p>
+      </div>
+  </div>
+</footer>

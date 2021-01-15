@@ -1,0 +1,14 @@
+<div>
+  <div class="max-w-3xl mx-auto px-4 py-12 lg:py-20 bg-gray-300 text-center">
+      <div class="">
+          {{ label | wrap:div.uppercase.mb-3.leading-wide.opacity-75 }}
+          {{ heading | wrap:h2.display-3.text-white.mt-0.mb-4 }}
+          <div class="mb-8 text-lg">
+            {{ copy }}
+          </div>
+          {{ if button_url }}
+            <a class="btn-outline text-white" href="{{ button_url }}">{{ button_text or 'Read more' }}</a>
+          {{ /if }}
+      </div>
+  </div>
+</div>

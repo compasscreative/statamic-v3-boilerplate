@@ -1,0 +1,43 @@
+<div class="text-center mx-auto">
+
+    <header class="mx-auto max-w-4xl px-8 mb-8">
+        {{ if plan_heading }}
+        {{ partial:components/list_section_heading
+            :label="plan_label"
+            :heading="plan_heading"
+            :copy="plan_subheading"
+        }}
+        {{ else }}
+        {{ partial:components/list_section_heading
+            :label="cta:plan_label"
+            :heading="cta:plan_heading"
+            :copy="cta:plan_subheading"
+        }}
+        {{ /if }}
+    </header>
+
+    <div class="container max-w-7xl mx-auto px-8 grid lg:grid-cols-3 gap-6 text-left">
+        {{ if plan_steps  }}
+        {{ plan_steps }}
+        <div class="py-4">
+            <div class="pl-20 relative pt-8 pb-8 pr-6 bg-white shadow-lg h-full rounded">
+                <div class="absolute top-0 left-0 p-6">{{ svg :src="icon_name" }}</div>
+                {{ heading | wrap:h2.mt-0.mb-2.text-orange-400.text-display-light }}
+                {{ copy | wrap:div }}
+            </div>
+        </div>
+        {{ /plan_steps }}
+        {{ else }}
+        {{ cta:plan_steps }}
+        <div class="py-4">
+            <div class="pl-20 relative pt-8 pb-8 pr-6 bg-white shadow-lg h-full rounded">
+                <div class="absolute top-0 left-0 p-6">{{ svg :src="icon_name" }}</div>
+                {{ heading | wrap:h2.mt-0.mb-2.text-orange-400.text-display-light }}
+                {{ copy | wrap:div }}
+            </div>
+        </div>
+        {{ /cta:plan_steps }}
+        {{ /if }}
+    </div>
+
+</div>

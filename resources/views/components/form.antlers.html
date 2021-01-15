@@ -1,0 +1,131 @@
+
+<section id="contact">
+
+    <div class="container px-8 mx-auto">
+
+        <div class="bg-white rounded bg-opacity-85 p-6 xl:p-16 max-w-6xl lg:w-3/4 mx-auto">
+
+            {{ if !hide_header }}
+
+            <header class="text-center mb-8">
+                {{ label | wrap:h1 }}
+                <h2 class="text-4xl mx-auto max-w-xl mb-4 mt-0 leading-tight">
+                    {{ form_heading or cta:form_heading }}
+                </h2>
+                <div class="wysiwyg mx-auto max-w-2xl mb-12 leading-loose">
+                    {{ form_copy or cta:form_copy }}
+                </div>
+            </header>
+
+            {{ /if}}
+
+            {{ form:set is="{ form_handle or 'contact' }" }}
+
+                {{ if {form:errors} }}
+                    <div class="py-20 text-xl">
+                        <p class="mb-3">Oops, here's what went wrong:</p>
+                        <ul>
+                            {{ form:errors }}
+                                <li class="py-2">{{ value }}</li>
+                            {{ /form:errors }}
+                        </ul>
+                    </div>
+                {{ /if }}
+
+                {{ form:create redirect="contact/thank-you" }}
+
+                <ul class="text-black md:grid md:grid-cols-2 gap-y-3 gap-x-8">
+
+
+                    {{ fields }}
+
+                        <li class="relative pb-4 md:pb-0" style="grid-column: {{ if type=="textarea"}}2; grid-row: 1 / span 3;{{ else }}1{{ /if }}">
+
+                            <label class="text-gray-400 block mb-1" for="{{ handle }}">
+                                {{ display }}
+                            </label>
+
+                            {{ if type=="select" }}
+
+                            <select class="p-4" name="{{ handle }}" id="{{ handle }}" value="{{ old }}" required>
+                                <option value="">Select One</option>
+                                {{ options }}
+                                <option value="{{ value }}">{{ value }}</option>
+                                {{ /options }}
+                            </select>
+
+                            {{ elseif type=="hidden" }}
+
+                            {{ partial:components/form_input
+                                p_type="hidden"
+                                p_name="{{ handle }}"
+                                p_id="{{ handle }}"
+                            }}
+
+                            {{ elseif type=="asset" }}
+
+                            {{ partial:components/form_input
+                                p_type="file"
+                                p_name="{{ handle }}"
+                                p_id="{{ handle }}"
+                            }}
+
+                            {{ elseif type=="assets" }}
+
+                            {{ partial:components/form_input
+                                p_type="file"
+                                p_name="{{ handle }}"
+                                p_id="{{ handle }}"
+                                p_multiple="true"
+                            }}
+
+                            {{ elseif type=="heading" }}
+
+                            <h3 id="{{ handle }}">{{ display }}</h3>
+
+                            {{ elseif type=="textarea" }}
+
+                            <textarea data-gramm_editor="false" style="height: calc(100% - 24px) !important; min-height: 200px" class="js-form-input p-3 h-40 w-full border-1 border-gray-400 border-opacity-50 focus:border-orange-400 focus:border-opacity-100 transition-colors rounded focus:outline-none" name="{{ handle }}" id="{{ handle }}" placeholder="{{ placeholder }}" data-placeholder="{{ placeholder }}" >{{ old or '' }}</textarea>
+
+                            {{ else }}
+
+                            <input
+                                class="js-form-input p-3 w-full border-1 border-gray-400 border-opacity-50 focus:border-orange-400 focus:border-opacity-100 transition-colors rounded focus:outline-none"
+                                type="{{ input_type or 'text' }}"
+                                name="{{ handle }}"
+                                id="{{ handle }}"
+                                value="{{ old or '' }}"
+                                placeholder="{{ placeholder }}"
+                                data-placeholder="{{ placeholder }}"
+                                autocomplete="{{ autocomplete or display }}"
+                                {{ validate }}
+                                {{ if value=="required" }}required{{ /if }}
+                                {{ /validate}}
+                            />
+
+                            {{ /if }}
+
+                            {{ if note }}
+                            <small>{{ note }}</small>
+                            {{ /if }}
+
+                        </li>
+
+                    {{ /fields }}
+
+                    <li style="grid-column: 2" class="flex pt-4">
+                        <button class="btn w-full self-end" type="submit">Send Message</button>
+                    </li>
+
+                </ul>
+
+                {{ /form:create }}
+
+            {{ /form:set}}
+
+
+        </div>
+
+    </div>
+
+</section>

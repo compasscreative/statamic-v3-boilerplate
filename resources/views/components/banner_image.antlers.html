@@ -1,0 +1,14 @@
+<div class="bg-gray-300 {{ width or 'w-full' }} {{ height or 'h-full' }}">
+    <picture>
+        <source
+            data-srcset="
+                {{ glide:id width="1920" height="1200" format="webp" filter="greyscale" }}"
+            type="image/webp"
+        >
+        <img
+            class="lazyload object-cover object-center w-full h-full"
+            alt="{{ alt }}"
+            data-src="{{ glide:id  width="1920" height="1200" format="jpg" filter="greyscale"  }}"
+        >
+    </picture>
+</div>

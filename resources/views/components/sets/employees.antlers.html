@@ -1,0 +1,10 @@
+<div class="py-12 xl:py-20 bg-gray-100">
+  <div class="mb-8">
+    {{ partial:components/list_section_heading heading="Meet our team." }}
+  </div>
+  <div class="container mx-auto px-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+    {{ collection:employees }}
+    {{ partial:components/card tag="div" :copy="position" }}
+    {{ /collection:employees }}
+  </div>
+</div>

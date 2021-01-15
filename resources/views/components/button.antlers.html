@@ -1,0 +1,15 @@
+{{# A single button. Only when an anchor tag is being used the attributes href, rel and target will be added. #}}
+<{{ tag or 'a' }}
+    {{ attribute }}
+    class="flex w-full sm:w-auto sm:inline-flex justify-center items-center py-4 px-4 sm:px-8 text-sm text-center font-medium leading-none tracking-widest uppercase {{ class or 'bg-neutral-900 text-white' }} no-underline select-none whitespace-no-wrap hover transition-colors duration-300"
+    {{ if tag == 'a' || !tag }}
+        data-swup-link
+        data-swup-preload
+        href="{{ link }}"
+        {{ if not link | is_local_url }}
+            rel="noopener" target="_blank"
+        {{ /if }}
+    {{ /if }}
+>
+    {{ label }}
+</{{ tag or 'a' }}>

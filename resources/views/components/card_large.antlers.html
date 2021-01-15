@@ -1,0 +1,15 @@
+<a href="{{ url }}" class="bg-gray rounded overflow-hidden block relative py-40 px-4 sm:pr-8 md:pr-16">
+  {{ assets:hero_image }}
+  <div class="absolute inset-0 w-full h-full">
+    {{ partial:components/banner_image height="h-full" width="w-full" }}
+  </div>
+  {{ /assets:hero_image }}
+  <div class="p-4 rounded md:p-12 ml-auto max-w-xl bg-white bg-opacity-85 hover:bg-opacity-100 transition-all duration-300 relative z-10">
+    {{ label | wrap:div }}
+    <h2 class="display-3 mb-4 mt-0">{{ title }}</h2>
+    {{ copy | wrap:div.mb-6.text-lg }}
+    {{ if button_text }}
+    <span class="btn-outline btn-outline-orange">{{ button_text }}</span>
+    {{ /if }}
+  </div>
+</a>

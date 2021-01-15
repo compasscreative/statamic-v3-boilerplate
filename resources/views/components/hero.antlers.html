@@ -1,0 +1,59 @@
+<header class="relative py-16 xl:py-24 {{ text_color or ' text-gray-100 ' }} {{ text_align or 'text-center' }} overflow-hidden">
+  <div class="h-20"></div>
+  <div class="relative z-30">
+
+    <div class="container mx-auto px-8">
+
+      <div class="max-w-3xl {{ if text_align!="text-left" }}mx-auto{{ /if }}">
+
+        {{ if hero_label_url }}
+        <a class="hover:underline" href="{{ hero_label_url }}">
+        {{ /if }}
+        {{ hero_label | wrap:h1.text-base.font-regular.mb-1.uppercase.tracking-wide.opacity-75 }}
+        {{ if hero_label_url }}
+        </a>
+        {{ /if }}
+
+        {{ if hero_label }}
+        <div class="{{ heading_color or " text-orange-400 " }}">
+          {{ hero_heading | wrap:h2.display-2.mb-1.mt-0 }}
+        </div>
+        {{ else }}
+          {{ if segment_1!="" }}
+            <div class="{{ heading_color or " text-orange-400 " }}">
+              {{ hero_heading | wrap:h1.display-2.mb-1.mt-0 }}
+            </div>
+          {{ else }}
+            <div class="{{ heading_color or " text-orange-400 " }}">
+              {{ hero_heading | wrap:h1.display-1.mb-1.mt-0 }}
+            </div>
+          {{ /if }}
+        {{ /if }}
+
+        {{ if hero_intro }}
+        <div class="wysiwyg pt-4 text-xl font-display-light max-w-2xl leading-relaxed {{ if text_align!="text-left" }}mx-auto{{ /if }}">
+          {{ hero_intro | widont }}
+        </div>
+        {{ /if }}
+
+        {{ if hero_call_to_action_url }}
+        <div class="pt-8 ">
+          <a class="btn" href="{{ hero_call_to_action_url }}">{{ hero_call_to_action_text }}</a>
+        </div>
+        {{ /if }}
+      </div>
+
+    </div>
+
+    {{ slot }}
+
+  </div>
+  {{ if hero_image }}
+  <div class="absolute inset-0 z-20 bg-black opacity-75"></div>
+  <div class="absolute inset-0 z-10 h-full">
+    {{ assets:hero_image }}
+    {{ partial:components/banner_image height="h-full" width="w-full" }}
+    {{ /assets:hero_image }}
+  </div>
+  {{ /if }}
+</header>

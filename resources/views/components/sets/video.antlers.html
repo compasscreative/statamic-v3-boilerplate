@@ -1,0 +1,25 @@
+{{ if !image }}
+<div class="container px-8 max-w-6xl mx-auto">
+  <div class="w-full relative" style="padding-bottom: 56.25%;">
+    <iframe class="absolute inset-0 w-full h-full lazyload" data-src="{{ video | embed_url }}"></iframe>
+  </div>
+</div>
+{{ /if }}
+
+{{ assets:image }}
+<div class="container px-8 max-w-6xl mx-auto">
+  {{ if video }}
+  <a class="glightbox relative flex items-center justify-center group" data-gallery="video" style="min-height: 500px;" href="{{ video }}">
+    <div class="relative z-20 opacity-75 group-hover:opacity-100 transition-opacity duration-300" style="width: 132px; height: 132px">
+      {{ svg src="play_btn.svg" }}
+    </div>
+  {{ /if }}
+    <div class="inset-0 absolute w-full h-full bg-gray-900 opacity-75 z-10"></div>
+    <div class="inset-0 absolute w-full h-full bg-gray-300">
+      {{ partial:components/card_image height="h-full" }}
+    </div>
+  {{ if video }}
+  </a>
+  {{ /if }}
+</div>
+{{ /assets:image }}

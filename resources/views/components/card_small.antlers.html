@@ -1,0 +1,29 @@
+<{{ tag or 'a' }} {{ if !tag }}href="{{ url }}"{{ /if }} class="flex rounded overflow-hidden shadow-lg {{ if style=="dark" }} bg-gray-900 {{ else }} bg-white {{ /if }}">
+
+  {{ if hero_image }}
+  {{ assets:hero_image }}
+  {{ partial:components/card_image width="w-20" height="h-full" }}
+  {{ /assets:hero_image }}
+  {{ /if }}
+  {{ if icon_name }}
+  <div class="pt-7 pr-1 pl-6">
+    {{ svg :src="icon_name" }}
+  </div>
+  {{ /if }}
+  <div class="p-2 {{ if icon_name }} pl-0 pt-3 {{ /if }}">
+    <h2 class="text-xl p-4 font-display-light m-0">{{ title }}</h2>
+    <div class="p-4 pt-0 -mt-2">
+      {{ copy }}
+    </div>
+    {{ if phone }}
+    <div class="my-1">
+      <a href="tel:{{ phone }}">{{ phone }}</a>
+    </div>
+    {{ /if }}
+    {{ if email }}
+    <div>
+      <a href="mailto:{{ email }}">{{ email }}</a>
+    </div>
+    {{ /if }}
+  </div>
+</{{ tag or 'a' }}>

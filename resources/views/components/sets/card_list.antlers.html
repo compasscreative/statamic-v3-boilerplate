@@ -1,0 +1,12 @@
+<div class="py-20 {{ if style=="dark" }} text-white bg-gray-400 {{ else }} bg-gray-100 {{ /if }}">
+  <div class="container mx-auto px-8 mb-12">
+    {{ partial:components/list_section_heading }}
+  </div>
+
+  <div class="container mx-auto px-8 grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+    {{ cards }}
+      {{ partial:components/card_small :title="heading" tag="div" }}
+    {{ /cards }}
+  </div>
+
+</div>

@@ -1,0 +1,79 @@
+{{# The sites header rendered on each page. #}}
+<div class="navbar py-4 absolute top-0 left-0 w-screen z-50 {{ yield:navbar_theme }} text-gray-400 bg-white {{ /yield:navbar_theme }}" x-data="{ open: false }">
+    <div class="container mx-auto px-8 flex justify-between items-center">
+
+        <a title="Go to home page" aria-label="Home page" href="/">{{ partial:components/logo }}</a>
+
+        <nav class="hidden xl:block">
+            <ul class="flex space-x-16 items-center">
+                {{ nav:main max_depth="1" include_home="false" }}
+                <li
+                class="flex items-center relative leading-none"
+                >
+                    <a
+                    class="{{ if last }}btn {{ else }}font-medium text-sm uppercase tracking-wide hover:text-orange-400 transition-color duration-300 {{ /if }}"
+                    href="{{ url }}"
+                    >
+                        {{ title }}
+                    </a>
+                </li>
+                {{ /nav:main }}
+            </ul>
+        </nav>
+        <button aria-label="Open Menu" style="height: 72px; width: 72px" class="focus:outline-none absolute right-0 top-0 p-4 z-20 xl:hidden" @click="open = (open) ? false : true">
+            <svg x-bind:class="{ 'burger-icon-active': open }" class="burger-icon h-full w-full" width="38" height="24" xmlns="http://www.w3.org/2000/svg">
+                <rect style="will-change: transform;" class="fill-current" x="0" y="0" width="38" height="2"></rect>
+                <rect style="will-change: transform;" class="fill-current" x="0" y="10" width="38" height="2"></rect>
+                <rect style="will-change: transform;" class="fill-current" x="0" y="20" width="38" height="2"></rect>
+            </svg>
+        </button>
+
+        {{# The mobile navigation. Hidden from xl and up #}}
+        <nav class="mobile-nav-list rounded-lg mx-4 bg-black xl:hidden absolute top-0 right-0 overflow-auto scrolling-touch"
+        style="width: calc(100% - 40px); max-height: calc(100vh - 100px)"
+        x-bind:class="{ 'mobile-nav-list-active': open }"
+        x-cloak>
+
+            <ul
+            class="block w-full text-center px-8 py-4"
+            >
+            {{ nav:main max_depth="1" include_home="false" }}
+            <li
+            class="w-full block leading-none py-3"
+            >
+            <a
+            class="{{ if last }}btn mt-2 {{ else }} text-white font-medium text-lg uppercase tracking-wide hover:text-primary-600{{ /if }}"
+            href="{{ url }}"
+            >
+            {{ title }}
+            </a>
+            </li>
+            {{ /nav:main }}
+            </ul>
+
+            <ul class="text-left text-white grid grid-cols-2 gap-4 block w-full bg-gray-400 bg-opacity-10 p-6">
+                {{ nav:footer max_depth="2" }}
+                <li class="{{ if !children }}single{{ /if }}">
+                  {{ if url }}
+                  <a class="opacity-75 hover:opacity-100 transition-color duration-300 whitespace-nowrap" href="{{ url }}">
+                  {{ else }}
+                  <div class="text-orange-400 text-xs uppercase mb-1 tracking-wide mt-2 md:mt-0 lg:mt-2 xl:mt-0">
+                  {{ /if }}
+                  <div class="text-sm mb-1">{{ title }}</div>
+                  {{ if url }}
+                  </a>
+                  {{ else }}
+                  </div>
+                  {{ /if}}
+                  {{ if is_current || is_parent }}
+                      {{ if children }}
+                        <ul>{{ *recursive children* }}</ul>
+                      {{ /if }}
+                  {{ /if }}
+                </li>
+              {{ /nav:footer }}
+            </ul>
+        </nav>
+
+    </div>
+</div>

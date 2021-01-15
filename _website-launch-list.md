@@ -47,7 +47,7 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 - N - Make sure all assets are compressed an minified
 - N - Optimize images, transparent pngs can be reduced with ImageAlpha.app
 - N - CMS contains helpful instructions
-- N - Form error messages are functioning properly (often rely on require for browser, non-js method)ain.
+- N - Form error messages are functioning properly (often rely on require for browser, non-js method).
 
 ## Programming
 

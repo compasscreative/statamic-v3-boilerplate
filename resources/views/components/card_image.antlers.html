@@ -1,0 +1,15 @@
+<div class="bg-gray-300 overflow-hidden {{ width or 'w-full' }} {{ height or 'h-40' }}">
+    <picture>
+        <source
+            data-srcset="
+                {{ glide:url width="800" height="500" fit="crop_focal" }}"
+            type="image/webp"
+        >
+        <img
+            class="lazyload object-cover object-center w-full h-full"
+            alt="{{ alt }}"
+            data-src="{{ glide:url width="800" height="500" fit="crop_focal" }}"
+            data-object-fit
+        >
+    </picture>
+</div>

@@ -1,0 +1,16 @@
+<div class="max-w-6xl mx-auto py-12 lg:py-24 text-center">
+  <div>
+    <h2 class="text-gray-200">{{ clients_heading }}</h2>
+  </div>
+  <ul class="">
+  {{ collection:clients }}
+  <li class="p-4 inline-block">
+    {{ assets:logo }}
+    {{ glide:url width="240" }}
+    <img style="height: 40px; mix-blend-mode: multiply;" class="lazyload object-contain object-center" data-src="{{ url }}" height="{{ height | divide:2 }}" width="{{ width | divide:2 }}" alt="{{ alt or title }}">
+    {{ /glide:url }}
+    {{ /assets:logo }}
+  </li>
+  {{ /collection:clients }}
+  </ul>
+</div>

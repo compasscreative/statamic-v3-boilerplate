@@ -1,0 +1,49 @@
+<div class="{{ if value_stack_container==true }} container mx-auto px-8 {{ /if }}">
+  {{ value_stack }}
+  {{ if first }}
+  <div class="{{ if value_stack_inline==true }} grid gap-8 md:gap-8 md:grid-cols-{{ total_results }}  {{ else }} grid gap-8 {{ /if }}">
+  {{# Preserve from purge: md:grid-cols-1 md:grid-cols-2 md:grid-cols-3 md:grid-cols-4 md:grid-cols-5 #}}
+  {{ /if }}
+    {{ if value_stack_inline==true }}
+      <div class="pl-12 relative">
+        <div class="absolute top-0 left-0">
+          {{ svg :src="icon_name" }}
+        </div>
+    {{ else }}
+      <div class="grid lg:grid-cols-2 gap-8">
+    {{ /if }}
+        {{ if video }}
+          {{ partial:components/sets/video }}
+        {{ elseif image }}
+          {{ assets:image }}
+              <div class="{{ switch between=" lg:col-start-1 image | lg:col-start-2 image" }} ">
+                {{ partial:components/card_image height="h-full" }}
+              </div>
+          {{ /assets:image }}
+        {{ /if }}
+      <style>
+        .lg\:row-start-0 {
+          grid-row-start: 1;
+        }
+      </style>
+      <div class="{{ if value_stack_inline!=true }}my-auto lg:row-start-{{ index }} {{ switch between=" lg:col-start-2 | lg:col-start-1 " }} {{ /if }}">
+          {{# Preserve from purge: lg:row-start-0 lg:row-start-1 lg:row-start-2 lg:row-start-3 lg:row-start-4 lg:row-start-5 #}}
+          {{ label | wrap:div.uppercase.mb-4 }}
+          {{ if value_stack_inline==true }}
+          {{ heading | wrap:h2.text-2xl.mb-2.mt-0.text-orange-400 }}
+          {{ else }}
+          {{ heading | wrap:h2.display-3.text-orange-400.mb-4.mt-0 }}
+          {{ /if }}
+          {{ copy | wrap:div.wysiwyg }}
+          {{ if button_url }}
+            <div class="pt-6">
+              <a class="btn-outline text-black border-gray-200" href="{{ button_url }}">{{ button_text or 'Read more' }}</a>
+            </div>
+          {{ /if }}
+      </div>
+    </div>
+  {{ if last }}
+  </div>
+  {{ /if }}
+  {{ /value_stack }}
+</div>
