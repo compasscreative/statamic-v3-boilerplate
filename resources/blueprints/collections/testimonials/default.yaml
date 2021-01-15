@@ -30,11 +30,11 @@ sections:
           smartypants: false
           antlers: false
       -
-        handle: compay
+        handle: location
         field:
           input_type: text
           antlers: false
-          display: Compay
+          display: Location
           type: text
           icon: text
           listable: hidden
