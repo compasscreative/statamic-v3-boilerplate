@@ -4,12 +4,3 @@ sections:
   main:
     display: Main
     fields:
-      -
-        import: hero
-      -
-        import: value_stack
-      -
-        import: plan
-
-
-
