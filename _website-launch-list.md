@@ -115,7 +115,7 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 - N - If client needs Brand Assets page, install it
 - N - If client needs an email signature builder tool, design and install it.
 ## Post-launch
-- N Setup Google Search Console
-- N Submit [sitemap](https://support.google.com/webmasters/answer/183668?hl=en&ref_topic=4581190) to webmaster tools
-- N Record CMS training video
-- N Add to AHREFS
+- N - Setup Google Search Console
+- N - Submit [sitemap](https://support.google.com/webmasters/answer/183668?hl=en&ref_topic=4581190) to webmaster tools
+- N - Record CMS training video
+- N - Add to AHREFS
