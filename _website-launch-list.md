@@ -9,19 +9,14 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 ## Accounts
 
 - N - Setup Mail delivery account (usually Postmark)
-- N - Setup Google Search Console
-- N - Submit [sitemap](https://support.google.com/webmasters/answer/183668?hl=en&ref_topic=4581190) to webmaster tools
 - N - Setup Google Tag Manger
 - N - Sentry for JavaScript bug tracking
-- N - Setup Hotjar
-- N - Setup Hotjar Funnels, Forms and Heatmaps
 - N - Add domain to uptimerobot.com
 
 ## Analytics
 - N - Install Google Analytics
 - N - Add CRM domain to Google Analytics (referral exclusion list)[https://gaconnector.com/blog/eliminate-webto-salesforce-com-referral-google-analytics/]
 - N - Setup appropriate Google Analytics Events
-- N - Relevant IP addresses have been excluded from analytics tracking. Compass office is 72.38.112.218
 - N - Enable PageView tracking in GTM / Analytics
 
 ## Control panel
@@ -119,3 +114,8 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 ## Tools
 - N - If client needs Brand Assets page, install it
 - N - If client needs an email signature builder tool, design and install it.
+## Post-launch
+- N Setup Google Search Console
+- N Submit [sitemap](https://support.google.com/webmasters/answer/183668?hl=en&ref_topic=4581190) to webmaster tools
+- N Record CMS training video
+- N Add to AHREFS
