@@ -47,6 +47,9 @@ return [
                         'name',
                         'email'
                 ]
+            ],
+            [
+                'type' => 'video_demo'
             ]
         ],
 
