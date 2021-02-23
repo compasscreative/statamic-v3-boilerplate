@@ -9,7 +9,7 @@ return [
             'first_name_field' => null,
             'last_name_field' => null,
             'email_field' => 'email',
-            'content_field' => 'message',
+            'content_field' => 'message_text',
         ],
         'application' => [
             'handle' => 'application',
