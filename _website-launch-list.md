@@ -10,7 +10,6 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 
 - N - Setup Mail delivery account (usually Postmark)
 - N - Setup Google Tag Manger
-- N - Sentry for JavaScript bug tracking
 - N - Add domain to uptimerobot.com
 
 ## Analytics
