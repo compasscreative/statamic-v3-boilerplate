@@ -14,7 +14,7 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 
 ## Analytics
 - N - Install Google Analytics
-- N - Add CRM domain to Google Analytics (referral exclusion list)[https://gaconnector.com/blog/eliminate-webto-salesforce-com-referral-google-analytics/]
+- N - Add CRM domain to Google Analytics [referral exclusion list](https://gaconnector.com/blog/eliminate-webto-salesforce-com-referral-google-analytics/)
 - N - Setup appropriate Google Analytics Events
 - N - Enable PageView tracking in GTM / Analytics (if using Swup.js)
 
