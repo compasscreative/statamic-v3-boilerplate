@@ -35,3 +35,5 @@ Route::statamic('email-signature', '', [
 Route::statamic('blog/archive', 'blog-archive', [
     'title' => 'Blog Archive',
 ]);
+
+Route::get('/!/DynamicToken/refresh', [DynamicToken::class, 'getRefresh']);
