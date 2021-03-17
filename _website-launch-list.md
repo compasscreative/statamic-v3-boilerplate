@@ -68,7 +68,7 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 ## Deployments
 - N - Setup deployments
 - N - Add ignored folders from deployment
-- N - Ensure cache settings are proper.
+- N - Ensure cache settings are proper. Set production environment file to `STATAMIC_STATIC_CACHING_STRATEGY='half'`, caching can be more fine-tuned as needed.
 
 ## SEO
 
