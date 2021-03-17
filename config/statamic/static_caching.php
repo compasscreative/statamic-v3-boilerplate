@@ -74,7 +74,7 @@ return [
         'class' => null,
 
         'rules' => [
-            //
+            'all'
         ],
 
     ],
