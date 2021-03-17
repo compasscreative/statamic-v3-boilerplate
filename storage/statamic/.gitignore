@@ -1,2 +1,8 @@
-*
 !.gitignore
+dimensions-cache/*
+glide/*
+search/*
+stache-locks/*
+users/*
+statamic/*
+forms/*

@@ -9,20 +9,14 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 ## Accounts
 
 - N - Setup Mail delivery account (usually Postmark)
-- N - Setup Google Search Console
-- N - Submit [sitemap](https://support.google.com/webmasters/answer/183668?hl=en&ref_topic=4581190) to webmaster tools
 - N - Setup Google Tag Manger
-- N - Sentry for JavaScript bug tracking
-- N - Setup Hotjar
-- N - Setup Hotjar Funnels, Forms and Heatmaps
 - N - Add domain to uptimerobot.com
 
 ## Analytics
 - N - Install Google Analytics
-- N - Add CRM domain to Google Analytics (referral exclusion list)[https://gaconnector.com/blog/eliminate-webto-salesforce-com-referral-google-analytics/]
+- N - Add CRM domain to Google Analytics [referral exclusion list](https://gaconnector.com/blog/eliminate-webto-salesforce-com-referral-google-analytics/)
 - N - Setup appropriate Google Analytics Events
-- N - Relevant IP addresses have been excluded from analytics tracking. Compass office is 72.38.112.218
-- N - Enable PageView tracking in GTM / Analytics
+- N - Enable PageView tracking in GTM / Analytics (if using Swup.js)
 
 ## Control panel
 - N - Customize control panel login page
@@ -109,13 +103,15 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 - N - Tested on Phones
 
 - N - Run [PageSpeed insights](https://developers.google.com/speed/pagespeed/insights/)
-- N - Run [Mobility Test](https://www.google.ca/webmasters/tools/mobile-friendly/)
 - N - Check for Broken Links [Link Checker](http://validator.w3.org/checklink)
-- N - Run Site grade using [pingdom](http://tools.pingdom.com)
 - N - Run [accessibility check](http://achecker.ca/checker/index.php)
-- N - Run [duplicate copy check](http://www.copyscape.com)
 
 
 ## Tools
 - N - If client needs Brand Assets page, install it
 - N - If client needs an email signature builder tool, design and install it.
+## Post-launch
+- N - Setup Google Search Console
+- N - Submit [sitemap](https://support.google.com/webmasters/answer/183668?hl=en&ref_topic=4581190) to webmaster tools
+- N - Record CMS training video
+- N - Add to AHREFS

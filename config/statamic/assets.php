@@ -52,8 +52,8 @@ return [
         |
         */
 
-        'cache' => env('SAVE_CACHED_IMAGES', false),
-        'cache_path' => public_path('img'),
+        'cache' => env('SAVE_CACHED_IMAGES', true),
+        'cache_path' => public_path('img-cache'),
 
         /*
         |--------------------------------------------------------------------------
