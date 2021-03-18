@@ -81,9 +81,9 @@ return [
         base_path('users'),
         resource_path('blueprints'),
         resource_path('fieldsets'),
-        resource_path('forms'),
+        // resource_path('forms'),
         resource_path('users'),
-        storage_path('forms'),
+        // storage_path('forms'),
     ],
 
     /*
