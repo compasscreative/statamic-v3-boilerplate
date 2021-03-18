@@ -129,6 +129,8 @@ return [
     'ignored_events' => [
         // \Statamic\Events\UserSaved::class,
         // \Statamic\Events\UserDeleted::class,
+        \Statamic\Events\FormSaved::class,
+        \Statamic\Events\FormSubmitted::class,
     ],
 
     /*
