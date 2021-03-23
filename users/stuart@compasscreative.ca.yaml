@@ -1,3 +1,5 @@
+roles:
+  - admin
 first_name: Stuart
 last_name: Pringle
 super: true
