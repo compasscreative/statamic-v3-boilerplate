@@ -1,11 +1,9 @@
 admin:
   title: Admin
-  slug: admin
   permissions:
     - super
 editor:
   title: Editor
-  slug: editor
   permissions:
     - 'access cp'
     - 'content:view_drafts_on_frontend'
@@ -63,3 +61,21 @@ editor:
     - 'delete users'
     - 'change passwords'
     - 'edit roles'
+    - 'edit other authors pages entries'
+    - 'edit other authors blog entries'
+    - 'edit other authors careers entries'
+    - 'edit other authors employee entries'
+    - 'edit other authors products entries'
+    - 'edit other authors projects entries'
+    - 'publish other authors pages entries'
+    - 'publish other authors blog entries'
+    - 'publish other authors careers entries'
+    - 'publish other authors employee entries'
+    - 'publish other authors products entries'
+    - 'publish other authors projects entries'
+    - 'delete other authors pages entries'
+    - 'delete other authors blog entries'
+    - 'delete other authors careers entries'
+    - 'delete other authors employee entries'
+    - 'delete other authors products entries'
+    - 'delete other authors projects entries'

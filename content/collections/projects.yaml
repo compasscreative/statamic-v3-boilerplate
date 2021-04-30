@@ -1,12 +1,7 @@
 title: Projects
 template: project
+revisions: false
 route: '/projects/{slug}'
 structure:
+  root: false
   max_depth: 1
-  tree:
-    -
-      entry: cdb3d647-6e04-48c2-a939-01ede8f0fcd3
-    -
-      entry: 4c1c2790-8916-47e6-9184-72116167433e
-    -
-      entry: 6d158017-5755-44af-b872-55684f9e6c58
